@@ -1,0 +1,53 @@
+.mwe-map-container{position:relative}.mwe-popup h4{margin:0 0 6px;font-size:16px}
+.mwe-popup {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
+    padding: 2px 5px;
+    margin: 0;
+    max-width: 250px; 
+    box-sizing: border-box;
+    position: relative;
+}
+
+.mwe-popup-close {
+    position: absolute;
+    top: 4px;  
+    right: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    z-index: 10;
+}
+
+.gm-style-iw-chr {
+    position:absolute;
+}
+
+.mwe-popup-title {
+    font-weight: bold;
+    font-size: 16px;
+    margin: 20px 0 4px 0;
+}
+
+.mwe-popup-address,
+.mwe-popup-content {
+    margin: 0;
+    padding: 0;
+}
+
+.mwe-popup-content p{
+    margin: 0;
+    padding: 0;
+}
+
+.gm-style-iw .gm-ui-hover-effect {
+    display: none !important;
+}
+
+.gm-style-iw {
+    padding: 10px !important;
+    overflow: hidden;
+    max-width: none !important;
+}
