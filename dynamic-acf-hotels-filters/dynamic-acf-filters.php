@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Dynamic acf hotels filters
- * Description: Dynamic filter for the ACF filters on Places, grid in its post and OpenStreetMap карта.
+ * Description: Dynamic filter for the ACF filters on Places, grid in its post and OpenStreetMap - shortcode [dynamic_acf_filters].
  * Version: 1.0
  * Author: IVB
  */
