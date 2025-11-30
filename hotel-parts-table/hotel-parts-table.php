@@ -1,14 +1,13 @@
 <?php
 /*
 Plugin Name: Hotel Parts Table
-Description: Показва таблица с ACF repeater hotel_parts чрез shortcode [hotel_parts_table].
+Description: Table ACF repeater hotel_parts with shortcode [hotel_parts_table].
 Version: 1.0
-Author: Твоето име
+Author: IBV
 */
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Защита
+if ( ! defined( 'ABSPATH' ) ) exit;
 
-// Зареждаме CSS файла
 function hpt_enqueue_styles() {
     wp_enqueue_style(
         'hotel-parts-css',
@@ -19,7 +18,7 @@ function hpt_enqueue_styles() {
 }
 add_action('wp_enqueue_scripts', 'hpt_enqueue_styles');
 
-// Шорткод функция
+
 function hotel_parts_table_shortcode() {
 
     if( have_rows('hotel_parts') ) {
@@ -73,28 +72,28 @@ add_shortcode('hotel_parts_table', 'hotel_parts_table_shortcode');
 
 
 function acf_stars_shortcode($atts) {
-    // Настройки по подразбиране
+    
     $atts = shortcode_atts( array(
-        'field'   => 'stars',       // името на ACF полето
-        'post_id' => '',            // ще определим динамично, ако не е подаден
-        'max'     => 5,             // максимален брой звезди
+        'field'   => 'stars',       
+        'post_id' => '',            
+        'max'     => 5,             
     ), $atts, 'acf_stars' );
 
-    // Ако няма зададено ID, използваме текущия пост
+    
     if ( empty($atts['post_id']) ) {
         global $post;
         if ( isset($post->ID) ) {
             $atts['post_id'] = $post->ID;
         } else {
-            return ''; // няма контекст
+            return ''; 
         }
     }
 
-    // Взимаме стойността от ACF
+ 
     $stars = get_field($atts['field'], $atts['post_id']);
     if ( ! $stars || ! is_numeric($stars) ) return '';
 
-    // SVG шаблони
+ 
     $svg_full = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="gold">
                     <path d="M12 .587l3.668 7.571L24 9.748l-6 5.843L19.335 24 12 19.897 4.665 24 6 15.591 0 9.748l8.332-1.59z"/>
                  </svg>';
@@ -103,7 +102,7 @@ function acf_stars_shortcode($atts) {
                     <polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9 12 2"/>
                   </svg>';
 
-    // Генерираме HTML
+
     $output = '<div class="acf-stars" data-post-id="' . esc_attr($atts['post_id']) . '">';
 
     for ($i = 1; $i <= $atts['max']; $i++) {
