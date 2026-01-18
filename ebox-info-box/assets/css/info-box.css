@@ -58,6 +58,12 @@ ebox-info-box {
     text-align: center;
 }
 
+.ebox-info-box.preset-3 .ebox-title-wrapper {
+    display: block;
+    align-items: center;
+    gap: 10px;
+}
+
 .ebox-info-box.preset-4 {
     padding: 0;
 }
