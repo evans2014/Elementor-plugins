@@ -1,0 +1,458 @@
+[
+    {
+        "key": "group_places_sample",
+        "title": "Places",
+        "fields": [
+            {
+                "key": "field_place_name",
+                "label": "Име на място",
+                "name": "text",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "",
+                "required": false,
+                "conditional_logic": false,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_place_category",
+                "label": "Категория",
+                "name": "category",
+                "aria-label": "",
+                "type": "select",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "wpml_cf_preferences": 0,
+                "admin_column_enabled": 0,
+                "choices": {
+                    "restaurant": "Ресторант",
+                    "museum": "Музей",
+                    "park": "Парк",
+                    "bar": "Бар",
+                    "exhibition": "Изложба",
+                    "festival: Фестивал": "festival: Фестивал"
+                },
+                "default_value": false,
+                "return_format": "value",
+                "multiple": 0,
+                "allow_null": 0,
+                "allow_in_bindings": 1,
+                "ui": 0,
+                "ajax": 0,
+                "placeholder": "",
+                "create_options": 0,
+                "save_options": 0
+            },
+            {
+                "key": "field_6903323c41fd6",
+                "label": "Country",
+                "name": "country",
+                "aria-label": "",
+                "type": "select",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "wpml_cf_preferences": 0,
+                "admin_column_enabled": 0,
+                "choices": {
+                    "bulgaria": "България",
+                    "serbiq": "Сърбия",
+                    "france": "Франция"
+                },
+                "default_value": false,
+                "return_format": "value",
+                "multiple": 0,
+                "allow_null": 0,
+                "allow_in_bindings": 1,
+                "ui": 0,
+                "ajax": 0,
+                "placeholder": "",
+                "create_options": 0,
+                "save_options": 0
+            },
+            {
+                "center_lat": 53.55064,
+                "center_lng": 10.00065,
+                "zoom": 12,
+                "height": 400,
+                "return_format": "raw",
+                "allow_map_layers": 1,
+                "max_markers": "",
+                "layers": [
+                    "OpenStreetMap.Mapnik"
+                ],
+                "key": "field_place_location",
+                "label": "Локация",
+                "name": "open_map_location",
+                "aria-label": "",
+                "type": "open_street_map",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "wpml_cf_preferences": 0,
+                "admin_column_enabled": 0,
+                "allow_in_bindings": 0,
+                "leaflet_map": "{\"lat\":53.55064,\"lng\":10.00065,\"zoom\":12,\"layers\":[\"OpenStreetMap.Mapnik\"],\"markers\":[]}"
+            },
+            {
+                "key": "field_69033c3e4b85a",
+                "label": "Type",
+                "name": "type",
+                "aria-label": "",
+                "type": "checkbox",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "wpml_cf_preferences": 0,
+                "admin_column_enabled": 0,
+                "choices": {
+                    "type1": "Тип 1",
+                    "type2": "Тип 2",
+                    "type3": "Тип 3"
+                },
+                "default_value": [],
+                "return_format": "label",
+                "allow_custom": 0,
+                "allow_in_bindings": 0,
+                "layout": "vertical",
+                "toggle": 0,
+                "save_custom": 0,
+                "custom_choice_button_text": "Add new choice"
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "places"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0,
+        "display_title": "",
+        "acfml_field_group_mode": "advanced"
+    },
+    {
+        "key": "group_her_hotel_fields",
+        "title": "Hotels",
+        "fields": [
+            {
+                "key": "field_her_city",
+                "label": "City",
+                "name": "city",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Въведи града (напр. София, Пловдив)",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "wpml_cf_preferences": 0,
+                "admin_column_enabled": 1,
+                "admin_column_position": "",
+                "admin_column_width": "",
+                "default_value": "",
+                "maxlength": "",
+                "allow_in_bindings": 1,
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_her_stars",
+                "label": "Stars",
+                "name": "stars",
+                "aria-label": "",
+                "type": "select",
+                "instructions": "Избери брой звезди",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "wpml_cf_preferences": 0,
+                "admin_column_enabled": 0,
+                "choices": {
+                    "1": "1 stars",
+                    "2": "2 stars",
+                    "3": "3 stars",
+                    "4": "4 stars",
+                    "5": "5 stars"
+                },
+                "default_value": false,
+                "return_format": "value",
+                "multiple": 0,
+                "allow_null": 0,
+                "allow_in_bindings": 1,
+                "ui": 0,
+                "ajax": 0,
+                "placeholder": "",
+                "create_options": 0,
+                "save_options": 0
+            },
+            {
+                "center_lat": 53.55064,
+                "center_lng": 10.00065,
+                "zoom": 12,
+                "height": 400,
+                "return_format": "raw",
+                "allow_map_layers": 1,
+                "max_markers": "",
+                "layers": [
+                    "OpenStreetMap.Mapnik"
+                ],
+                "key": "field_6901c4f1fb1de",
+                "label": "Location",
+                "name": "location",
+                "aria-label": "",
+                "type": "open_street_map",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "allow_in_bindings": 1,
+                "leaflet_map": "{\"lat\":53.5507112,\"lng\":10.0006485,\"zoom\":12,\"layers\":[\"OpenStreetMap.Mapnik\"],\"markers\":[]}"
+            },
+            {
+                "key": "field_690301a6d043c",
+                "label": "Hotel parts",
+                "name": "hotel_parts",
+                "aria-label": "",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "wpml_cf_preferences": 0,
+                "layout": "table",
+                "pagination": 0,
+                "min": 0,
+                "max": 0,
+                "collapsed": "",
+                "button_label": "Добавяне на ред",
+                "rows_per_page": 20,
+                "sub_fields": [
+                    {
+                        "key": "field_690301bfd3dfc",
+                        "label": "Name",
+                        "name": "part_name",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "wpml_cf_preferences": 2,
+                        "default_value": "",
+                        "maxlength": "",
+                        "allow_in_bindings": 0,
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "parent_repeater": "field_690301a6d043c"
+                    },
+                    {
+                        "key": "field_69030236439c7",
+                        "label": "Room Size (m²)",
+                        "name": "room_size",
+                        "aria-label": "",
+                        "type": "number",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "wpml_cf_preferences": 0,
+                        "default_value": "",
+                        "min": "",
+                        "max": "",
+                        "allow_in_bindings": 0,
+                        "placeholder": "",
+                        "step": "",
+                        "prepend": "",
+                        "append": "",
+                        "parent_repeater": "field_690301a6d043c"
+                    },
+                    {
+                        "key": "field_69030253439c8",
+                        "label": "Number of Rooms",
+                        "name": "number_of_rooms",
+                        "aria-label": "",
+                        "type": "number",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "wpml_cf_preferences": 0,
+                        "default_value": "",
+                        "min": "",
+                        "max": "",
+                        "allow_in_bindings": 0,
+                        "placeholder": "",
+                        "step": "",
+                        "prepend": "",
+                        "append": "",
+                        "parent_repeater": "field_690301a6d043c"
+                    },
+                    {
+                        "key": "field_6903028175fd9",
+                        "label": "Rows of Chairs",
+                        "name": "rows_of_chairs",
+                        "aria-label": "",
+                        "type": "number",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "wpml_cf_preferences": 2,
+                        "default_value": "",
+                        "min": "",
+                        "max": "",
+                        "allow_in_bindings": 0,
+                        "placeholder": "",
+                        "step": "",
+                        "prepend": "",
+                        "append": "",
+                        "parent_repeater": "field_690301a6d043c"
+                    },
+                    {
+                        "key": "field_6903029375fda",
+                        "label": "Parliamentary",
+                        "name": "parliamentary",
+                        "aria-label": "",
+                        "type": "number",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "wpml_cf_preferences": 0,
+                        "default_value": "",
+                        "min": "",
+                        "max": "",
+                        "allow_in_bindings": 0,
+                        "placeholder": "",
+                        "step": "",
+                        "prepend": "",
+                        "append": "",
+                        "parent_repeater": "field_690301a6d043c"
+                    },
+                    {
+                        "key": "field_690302aa75fdb",
+                        "label": "Standing",
+                        "name": "standing",
+                        "aria-label": "",
+                        "type": "number",
+                        "instructions": "",
+                        "required": false,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "wpml_cf_preferences": 0,
+                        "default_value": "",
+                        "min": "",
+                        "max": "",
+                        "step": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "parent_repeater": "field_690301a6d043c"
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "hotel"
+                }
+            ]
+        ],
+        "menu_order": 1,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0,
+        "display_title": "",
+        "acfml_field_group_mode": "advanced"
+    }
+]
