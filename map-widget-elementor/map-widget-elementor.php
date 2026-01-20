@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Map Widget Elementor
- * Description: Elementor widget: Google Maps with Repeater locations, SVG icons, clustering, popup.
+ * Description: Elementor widget: Google Maps с Repeater locations, SVG icons, clustering, popup.
  * Version: 1.5.0
  * Author: IVB
  * Text Domain: map-widget-elementor
@@ -10,7 +10,7 @@
 if ( ! defined( 'ABSPATH' ) ) exit;
 
 if ( ! defined('MWEL_GOOGLE_MAPS_API_KEY') ) {
-    define('MWEL_GOOGLE_MAPS_API_KEY', 'add your API key'); // <-- 
+    define('MWEL_GOOGLE_MAPS_API_KEY', 'AIzaSyBIcNrFHL2CckWa6OKlUlXOm_YRS465I38'); // <-- 
 }
 
 function mwe_enqueue_scripts() {
@@ -30,6 +30,7 @@ add_action('elementor/widgets/register', function($widgets_manager){
 
 function mwe_enqueue_google_maps() {
     $api_key = MWEL_GOOGLE_MAPS_API_KEY;
+
     if ( $api_key ) {
         wp_enqueue_script( 'mwe-gmaps', 'https://maps.googleapis.com/maps/api/js?key=' . $api_key, [], null, true );
     }

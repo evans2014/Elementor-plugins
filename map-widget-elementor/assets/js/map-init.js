@@ -138,7 +138,7 @@
                 markers.push(marker);
             });
 
-            // Кластеринг
+            // Clusters
             if(settings.cluster){
                 new MarkerClusterer(map, markers, {
                     imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'
