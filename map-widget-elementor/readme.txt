@@ -6,7 +6,7 @@ Map Widget Elementor widget for Google Maps with support for multiple markers, p
 Description
 This plugin adds a custom Elementor widget for Google Maps.
 The widget allows adding multiple markers via Repeater, each with coordinates, title, popup content and individual icon.
-Supports marker clustering and different map styles.
+Supports marker clustering and different map styles. The map is not visible in the admin panel - it is displayed on the frontend.
 
 Features
 - Elementor widget for Google Maps
@@ -65,8 +65,5 @@ Notes
 - MarkerClusterer is loaded separately
 - Widget supports more than one map per page
 
-Changelog
 
-1.0.0
-- Initial release
 
