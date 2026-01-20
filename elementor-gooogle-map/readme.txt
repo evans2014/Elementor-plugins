@@ -1,91 +1,72 @@
 Custom Elementor Google Map Widget
-==================================
+======================================
 
-Custom Elementor widget за Google Maps с поддръжка на множество маркери, popup съдържание, custom икони, marker clustering и map styles. Работи както в Elementor editor, така и на frontend.
+Custom Elementor widget for Google Maps with support for multiple markers, popup content, custom icons, marker clustering and map styles. Works both in the Elementor editor and on the frontend.
 
 Description
------------
-
-Този плъгин добавя custom Elementor widget за Google Maps.
-Widget-ът позволява добавяне на множество маркери чрез Repeater, всеки с координати, заглавие, съдържание за popup и индивидуална икона.
-Поддържа marker clustering и различни стилове на картата.
+This plugin adds a custom Elementor widget for Google Maps.
+The widget allows adding multiple markers via Repeater, each with coordinates, title, popup content and individual icon.
+Supports marker clustering and different map styles.
 
 Features
---------
-
-- Elementor widget за Google Maps
-- Множество маркери (Repeater)
-- Popup с title и content
-- Custom marker icon за всеки маркер
+- Elementor widget for Google Maps
+- Multiple markers (Repeater)
+- Popup with title and content
+- Custom marker icon for each marker
 - Marker clustering
 - Auto zoom / fitBounds
 - Map styles:
-  - Default
-  - Silver
-  - Retro
-  - Dark
-  - Night
-  - Aubergine
-  - Custom JSON
-- Работи в Elementor editor и frontend
-- Поддържа повече от една карта на страница
+    - Default
+    - Silver
+    - Retro
+    - Dark
+    - Night
+    - Aubergine
+- Custom JSON
+- Works in Elementor editor and frontend
+- Supports more than one map per page
 
 Installation
-------------
+1. Upload the plugin folder to:
+wp-content/plugins/
 
-1. Качете папката на плъгина в:
-   wp-content/plugins/
-2. Активирайте плъгина от WordPress Admin → Plugins
-3. Уверете се, че Elementor е активен
-4. Добавете Google Maps API Key (Maps JavaScript API)
+2. Activate the plugin from WordPress Admin → Plugins
+
+3. Make sure Elementor is active
+4. Add Google Maps API Key (Maps JavaScript API)
 
 Usage
------
-
-1. Отворете страница с Elementor
-2. Добавете widget-а "Custom Google Map"
-3. Добавете маркери чрез Repeater:
-   - Latitude
-   - Longitude
-   - Title
-   - Content (popup)
-   - Custom Icon (по желание)
-4. Изберете zoom и map style
-5. По желание активирайте clustering
+1. Open a page with Elementor
+2. Add the "Custom Google Map" widget
+3. Add markers via Repeater:
+- Latitude
+- Longitude
+- Title
+- Content (popup)
+- Custom Icon (optional)
+4. Select zoom and map style
+5. Optionally enable clustering
 
 Map Styles
-----------
-
-Map styles се дефинират в PHP като масив и се подават директно към Google Maps styles опцията.
+Map styles are defined in PHP as an array and are passed directly to the Google Maps styles option.
 
 Marker Clustering
------------------
-
-Използва се MarkerClusterer за автоматично обединяване на близки маркери.
-Zoom-ът се управлява автоматично при клик върху клъстер.
+MarkerClusterer is used to automatically group nearby markers.
+Zoom is automatically controlled when clicking on a cluster.
 
 Requirements
-------------
-
 - WordPress 6.0+
 - Elementor 3.30+
 - PHP 7.4+
-- Google Maps API Key (Maps JavaScript API активиран)
+- Google Maps API Key (Maps JavaScript API enabled)
 
 Notes
------
-
-- Google Maps JavaScript API трябва да бъде зареден само веднъж
-- MarkerClusterer се зарежда отделно
-- Widget-ът поддържа повече от една карта на страница
+- ​​Google Maps JavaScript API needs to be loaded only once
+- MarkerClusterer is loaded separately
+- Widget supports more than one map per page
 
 Changelog
----------
 
 1.0.0
 - Initial release
 
-Author
-------
-
-Custom Elementor Google Map Widget
