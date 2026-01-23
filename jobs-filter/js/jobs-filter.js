@@ -9,6 +9,14 @@
             $('#job-loader').hide();
           }
         }
+		let shouldScroll = false;
+
+		$(document).on('click', '.ajax-page-link', function (e) {
+		  e.preventDefault();
+		  shouldScroll = true;
+		  currentPage = $(this).data('page');
+		  loadJobs(currentTech, currentPage);
+		});
 
         function loadJobs(tech = '', page = 1) {
           showLoader(true);
@@ -24,6 +32,13 @@
             success: function(res) {
               $('#jobs-list').html(res.jobs_html);
               $('#pagination-container').html(res.pagination_html);
+			  if (shouldScroll) {
+					$('html, body').animate({
+					  scrollTop: $('.filter-top').offset().top - 220
+					}, 600);
+					shouldScroll = false;
+				  }
+
               showLoader(false);
             },
             error: function() {
@@ -46,4 +61,5 @@
         });
 
         loadJobs();
+            
       });

@@ -19,15 +19,12 @@ The plugin provides the `[jobs_filter]` shortcode, which:
 * Shows the number of posts for each value
 * Loads filtered results using AJAX without reloading the page
 
----
-
 ## Requirements
 
 * WordPress 5.0 or higher
 * PHP 7.4 or higher
 * Advanced Custom Fields (ACF) plugin activated
 * Registered custom post type `vacancies`
-
 
 ## Installation
 
@@ -36,18 +33,15 @@ The plugin provides the `[jobs_filter]` shortcode, which:
 2. Activate the plugin from the WordPress admin panel
 3. Ensure the ACF field and the `vacancies` post type exist
 
-
 ## Shortcode
 
 [jobs_filter]
-
 
 ### How it works
 
 * Outputs a select dropdown
 * On value change, sends an AJAX request
 * Updates the list of vacancies dynamically
-
 
 ## ACF Field
 
@@ -64,7 +58,6 @@ Dropdown output example:
 Technical Writer (5)
 Solution Architect (2)
 Scrum Master (7)
-
 
 The number indicates how many `vacancies` posts exist for that value.
 
@@ -92,12 +85,5 @@ You can add your own CSS as needed.
 * Supports only one ACF field
 * Pagination is not included
 * Intended for simple job listing filters
-
-## Usage
-
-Add the shortcode to any page or post:
-
-
-[jobs_filter]
 
 

@@ -26,8 +26,27 @@ font-family: "proxima-nova", Sans-serif;
     justify-content: center;
     margin-top: 20px;
 }
+.button-main .elementor-button-text {
+	color:#fff !important;
+}
 
+h2.filter-title {
+	font-family: "proxima-nova", Sans-serif;
+  font-size: 82px;
+  font-weight: bold;
+}
 
+h2.search-title {
+	font-family: "proxima-nova", Sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  color: var( --e-global-color-accent );
+}
+h2.heading-title {
+  font-family: "proxima-nova", Sans-serif;
+  font-size: 82px;
+  font-weight: bold;
+}
 
 .job-item {
 	border-bottom:1px solid #ccc;
@@ -58,7 +77,7 @@ a.elementor-button-link {
   border-radius: 10px 10px 10px 10px;
   box-shadow: 0px 5px 10px 0px rgba(235, 95.99999999999996, 18, 0.3803921568627451) !important;
   padding: 15px 55px 15px 55px;
-}
+}.button-main a.elementor-button-link:hover, .button-main a.elementor-button-link:focus {  background-color: #dc2626 !important;  color: #FFFFFF;}
 
 h2.heading-title {
   font-family: "proxima-nova", Sans-serif;
@@ -97,7 +116,7 @@ h2.color-heading-title {
     padding: 8px 8px 8px 40px;
     margin-bottom: 20px;
     position: relative;
-	background: url(https://strypes.loc/wp-content/uploads/2021/08/b1.svg) no-repeat right #0F596E;
+	background: url(/wp-content/uploads/2021/08/b1.svg) no-repeat right #0F596E;
     background-size: auto;
   background-size: 32px;
   border: none;
@@ -201,13 +220,25 @@ display: inline-flex;
     border-right: 2px solid #333;
     transform: translate(-50%, -50%) rotate(45deg);
 }
+
+@media screen and (max-width: 880px) {
+  .job-image { 
+		display:none;
+  }
+  h2.heading-title {
+	
+	  font-size: 52px;
+
+	  margin-top: 20px;
+	}
+}
 .title-main h3 a {
 	color:#0F596E;
 }
 .job-item {
   display: inline-flex;
 }
-@media screen and (max-width:1100px) {
+@media screen and (max-width:1000px) {
 	h2.filter-title {
 		font-size: 62px;
 		font-weight: bold;
@@ -226,6 +257,6 @@ display: inline-flex;
 		display:block;
 	}	
 	.button-main {
-	  text-align: center;
-	 }
+  text-align: center;
+ }
 }

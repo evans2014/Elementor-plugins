@@ -3,7 +3,7 @@
  * Plugin Name: Jobs Filter Plugin (ACF)
  * Description: AJAX filter ACF
  * Version: 1.0
- * Author: ICT-Strypes
+ * Author: IVB
  */
 
 add_shortcode('jobs_filter', function () {
@@ -12,11 +12,11 @@ add_shortcode('jobs_filter', function () {
         'post_type' => 'vacancies',
         'posts_per_page' => -1,
         'post_status' => 'publish',
+		
     ]);
 
     $tech_values = [];
-
-     foreach ($jobs as $job) {
+   foreach ($jobs as $job) {
         $value = get_field('job_technology', $job->ID);
 
         if (is_array($value)) {
@@ -42,12 +42,12 @@ add_shortcode('jobs_filter', function () {
                 <div class="elementor-widget-wrap elementor-element-populated">
                     <div class="elementor-element elementor-element-2cb8884d elementor-widget elementor-widget-heading" data-id="2cb8884d" data-element_type="widget" data-widget_type="heading.default">
                         <div class="elementor-widget-container">
-                            <h2 class="heading-title">
+                            <h2 class="heading-title filter-title filter-top">
                                 We are hiring</h2>		</div>
                     </div>
                     <div class="elementor-element elementor-element-1c7092aa elementor-widget elementor-widget-heading" data-id="1c7092aa" data-element_type="widget" data-widget_type="heading.default">
                         <div class="elementor-widget-container">
-                            <h2 class="color-heading-title">Search open positions</h2>		</div>
+                            <h2 class="color-heading-title search-title">Search open positions</h2>		</div>
                     </div>
                     <div class="elementor-element elementor-element-64ef724b elementor-widget elementor-widget-shortcode" data-id="64ef724b" data-element_type="widget" data-widget_type="shortcode.default">
                         <div class="elementor-widget-container">
@@ -70,11 +70,11 @@ add_shortcode('jobs_filter', function () {
                     </div>
                 </div>
             </div>
-            <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-1c476d0c" data-id="1c476d0c" data-element_type="column">
+            <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-1c476d0c elementor-hidden-phone" data-id="1c476d0c" data-element_type="column">
                 <div class="elementor-widget-wrap elementor-element-populated">
                     <div class="elementor-element elementor-element-79e64906 elementor-widget elementor-widget-image" data-id="79e64906" data-element_type="widget" data-widget_type="image.default">
                         <div class="elementor-widget-container">
-                            <img decoding="async" width="442" height="481" src="https://strypes.loc/wp-content/uploads/2021/11/job-images.png" class="attachment-large size-large wp-image-1785" alt="" loading="lazy" srcset="https://strypes.loc/wp-content/uploads/2021/11/job-images.png 442w, https://strypes.loc/wp-content/uploads/2021/11/job-images-276x300.png 276w" sizes="(max-width: 442px) 100vw, 442px">															</div>
+                            <img decoding="async" width="442" height="481" src="/wp-content/uploads/2025/07/job-images.png" class="attachment-large size-large wp-image-1785 job-image" alt="" loading="lazy" srcset="/wp-content/uploads/2025/07/job-images.png 442w, https://strypes.loc/wp-content/uploads/2021/11/job-images-276x300.png 276w" sizes="(max-width: 442px) 100vw, 442px">															</div>
                     </div>
                 </div>
             </div>
@@ -110,7 +110,9 @@ function filter_jobs_callback() {
 
     $args = [
         'post_type' => 'vacancies',
-        'posts_per_page' => 6,
+        'posts_per_page' => 10,
+		'orderby'=>'title',
+		'order'=>'ASC',
         'paged' => $paged,
     ];
 
