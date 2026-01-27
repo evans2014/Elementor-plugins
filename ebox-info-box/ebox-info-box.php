@@ -3,7 +3,7 @@
  * Plugin Name: Elementor Info Box
  * Description: Elementor Info Box widget with presets.
  * Version: 1.2
- * Author: IVB
+ * Author: ICT-Strypes
  * Text Domain: ebox-info
  */
 

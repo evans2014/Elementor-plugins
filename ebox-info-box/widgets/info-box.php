@@ -74,6 +74,18 @@ class Ebox_Info_Box extends Widget_Base {
                 'condition' => [ 'media_type' => 'icon' ],
             ]
         );
+		$this->add_control(
+			'button_icon_color',
+			[
+				'label' => __( 'Icon Color', 'ebox' ),
+				'type' => Controls_Manager::COLOR,
+				'default' => '#FF0000',
+				'selectors' => [
+					'{{WRAPPER}} .info-box-button i, 
+					 {{WRAPPER}} .info-box-button svg' => 'fill: {{VALUE}}; color: {{VALUE}};',
+				],
+			]
+		);
 
         $this->add_control(
             'image',
@@ -84,12 +96,42 @@ class Ebox_Info_Box extends Widget_Base {
             ]
         );
 
-        $this->add_control(
+       $this->add_control(
             'title',
             [
                 'label' => __( 'Title', 'ebox' ),
                 'type' => Controls_Manager::TEXT,
                 'default' => 'Info Box Title',
+            ]
+        );
+
+        $this->add_control(
+            'spacing_title_icon',
+            [
+                'label' => __( 'Spacing between Title and Description', 'ebox' ),
+                'type' => Controls_Manager::SLIDER,
+                'size_units' => [ 'px', 'em', '%' ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 100,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 100,
+                    ],
+                ],
+                'default' => [
+                    'unit' => 'px',
+                    'size' => 0,
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .info-box-icon' => 'padding-right: {{SIZE}}{{UNIT}};',
+                ],
             ]
         );
 
@@ -101,6 +143,36 @@ class Ebox_Info_Box extends Widget_Base {
                 'default' => 'Info box description goes here.',
             ]
         );
+		
+		$this->add_control(
+			'spacing_title_description',
+			[
+				'label' => __( 'Spacing between Title and Description', 'ebox' ),
+				'type' => Controls_Manager::SLIDER,
+				'size_units' => [ 'px', 'em', '%' ],
+				'range' => [
+					'px' => [
+						'min' => 0,
+						'max' => 100,
+					],
+					'em' => [
+						'min' => 0,
+						'max' => 10,
+					],
+					'%' => [
+						'min' => 0,
+						'max' => 100,
+					],
+				],
+				'default' => [
+					'unit' => 'px',
+					'size' => 0,
+				],
+				'selectors' => [
+					'{{WRAPPER}} .info-box-description' => 'margin-top: {{SIZE}}{{UNIT}};',
+				],
+			]
+		);
 
         $this->end_controls_section();
 
@@ -333,14 +405,27 @@ class Ebox_Info_Box extends Widget_Base {
 
     protected function render() {
         $s = $this->get_settings_for_display();
+		$icon = $settings['button_icon'];
+		$icon_html = \Elementor\Icons_Manager::render_icon( $icon, [ 'aria-hidden' => 'true' ] );
         ?>
         <div class="ebox-info-box <?php echo esc_attr( $s['preset'] ); ?>">
 
             <div class="ebox-title-wrapper">
-                <div class="ebox-media">
+                <div class="ebox-media info-box-icon">
                     <?php
+					
                     if ( $s['media_type'] === 'icon' ) {
-                        Icons_Manager::render_icon( $s['icon'], [ 'aria-hidden' => 'true' ] );
+						$icon_color = isset( $settings['button_icon_color'] ) ? $settings['button_icon_color'] : '';
+
+							// Контейнер, на който задаваме цвета
+							echo '<div class="info-box-button" style="color:' . esc_attr( $icon_color ) . ';">';
+
+							// Render иконата (SVG или Font Icon)
+							\Elementor\Icons_Manager::render_icon( $s['icon'], [
+								'aria-hidden' => 'true',
+							] );
+
+							echo '</div>';
                     } elseif ( ! empty( $s['image']['url'] ) ) {
                         echo '<img src="'. esc_url( $s['image']['url'] ) .'">';
                     }
@@ -350,7 +435,7 @@ class Ebox_Info_Box extends Widget_Base {
                 <h2 class="ebox-title"><?php echo esc_html( $s['title'] ); ?></h2>
             </div>
 
-            <div class="ebox-description"><?php echo esc_html( $s['description'] ); ?></div>
+            <div class="ebox-description info-box-description"><?php echo  $s['description']; ?></div>
 
             <?php if ( $s['button_text'] ) : ?>
                 <a class="ebox-button" href="<?php echo esc_url( $s['button_link']['url'] ); ?>">

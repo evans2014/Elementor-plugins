@@ -52,12 +52,12 @@ ebox-info-box {
     gap: 20px;
 }
 
+
 .ebox-info-box.preset-3 {
     background: #fff;
     border-radius: 12px;
     text-align: center;
 }
-
 .ebox-info-box.preset-3 .ebox-title-wrapper {
     display: block;
     align-items: center;
