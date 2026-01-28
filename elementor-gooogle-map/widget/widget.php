@@ -205,6 +205,9 @@ class CE_Map_Widget extends Widget_Base
 				left: 0!important;
 				top: 0!important;
 			}
+			.gm-style-mtc ul li {
+				list-style:none !important;
+			}
 
 		</style>
         <script>
