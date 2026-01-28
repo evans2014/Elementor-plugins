@@ -3,7 +3,7 @@
  * Plugin Name: Elementor Google Map Widget
  * Description: Elementor widget: Google Maps с Repeater locations, SVG icons, clustering, popup.
  * Version: 1.0.0
- * Author: IVB
+ * Author: ICT-Strypes
  */
 
 if (!defined('ABSPATH')) exit;
@@ -28,8 +28,9 @@ add_action('wp_enqueue_scripts', function () {
     wp_register_script('ce_google_map', plugins_url('assets/js/map-init.js', __FILE__), ['jquery','marker-clusterer'], '1.0', true);
 });
 
-// Регистрация на widget-а
+
 add_action('elementor/widgets/register', function ($widgets_manager) {
     require_once __DIR__ . '/widget/widget.php';
     $widgets_manager->register(new \CE_Map_Widget());
 });
+
