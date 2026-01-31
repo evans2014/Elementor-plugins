@@ -1,0 +1,83 @@
+# Copyright (C) 2024 Your Name
+# This file is distributed under the same license as the EHC Hover Card for Elementor plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: EHC Hover Card for Elementor 1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/ehc-hover-card\n"
+"POT-Creation-Date: 2024-06-15 12:00+0000\n"
+"PO-Revision-Date: 2024-06-15 15:00+0300\n"
+"Last-Translator: Your Name <your@email.com>\n"
+"Language-Team: Bulgarian\n"
+"Language: bg_BG\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#: ehc-hover-card-widget.php:45
+msgid "EHC Hover Card"
+msgstr "EHC Картичка с ховър"
+
+#: ehc-hover-card-widget.php:60
+msgid "Content"
+msgstr "Съдържание"
+
+#: ehc-hover-card-widget.php:65
+msgid "Title"
+msgstr "Заглавие"
+
+#: ehc-hover-card-widget.php:70
+msgid "In Vitro Lab, evaluation of biological activity and toxicity"
+msgstr "In Vitro лаборатория, оценка на биологична активност и токсичност"
+
+#: ehc-hover-card-widget.php:78
+msgid "Short Description"
+msgstr "Кратко описание"
+
+#: ehc-hover-card-widget.php:83
+msgid "Laboratory for development and testing of pharmaceutical forms, physicochemical and biopharmaceutical analysis."
+msgstr "Лаборатория за разработване и тестване на фармацевтични форми, физикохимичен и биофармацевтичен анализ."
+
+#: ehc-hover-card-widget.php:91
+msgid "Long Description (on hover)"
+msgstr "Дълго описание (при ховър)"
+
+#: ehc-hover-card-widget.php:96
+msgid "Development of individual projects; storage of microbial collection; microbiological assessment of cosmetic and pharmaceutical products; in vitro tests for cytotoxicity, antioxidant and antineoplastic activity."
+msgstr "разработване на индивидуални проекти; съхранение на колекция микроорганизми; микробиологична оценка на козметични и фармацевтични продукти; in vitro тестове за цитотоксичност, антиоксидантна и антинеопластична активност."
+
+#: ehc-hover-card-widget.php:104
+msgid "SVG Icon (HTML)"
+msgstr "SVG икона (HTML)"
+
+#: ehc-hover-card-widget.php:112
+msgid "Button Text"
+msgstr "Текст на бутона"
+
+#: ehc-hover-card-widget.php:117
+msgid "See more"
+msgstr "Вижте още"
+
+#: ehc-hover-card-widget.php:125
+msgid "Link"
+msgstr "Връзка"
+
+#: ehc-hover-card-widget.php:133
+msgid "Background"
+msgstr "Фон"
+
+#: ehc-hover-card-widget.php:138
+msgid "Background Image"
+msgstr "Фоново изображение"
+
+#: ehc-hover-card-widget.php:146
+msgid "Overlay Color (Normal)"
+msgstr "Цвят на овърлей (нормален)"
+
+#: ehc-hover-card-widget.php:154
+msgid "Overlay Color (Hover)"
+msgstr "Цвят на овърлей (ховър)"

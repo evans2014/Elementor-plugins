@@ -1,0 +1,6 @@
+
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT GRID\n"
+"Text Domain: project-grid\n"
+"Content-Type: text/plain; charset=UTF-8\n"

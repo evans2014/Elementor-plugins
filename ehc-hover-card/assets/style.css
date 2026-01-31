@@ -1,0 +1,274 @@
+
+.ehc-card {
+    width: 100%;
+    height: 420px;
+}
+
+@media (max-width: 768px) {
+    .ehc-card {
+        width: 100%;
+        height: 370px;
+        padding: 20px;
+    }
+
+    .ehc-title {
+        font-size: 16px;
+    }
+
+    .ehc-description {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .ehc-card {
+        width: 100%;
+        height: auto;
+        min-height: 430px;
+        padding: 18px;
+    }
+}
+
+
+.ehc-card {
+    
+    transition:
+            transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+            box-shadow 0.4s ease;
+}
+
+.ehc-card::before {
+    transition: background 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.ehc-description {
+    transition:
+            opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+            transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.ehc-button {
+    transition:
+            opacity 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+            transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+            visibility 0.35s ease;
+}
+
+
+[class*="ehc-hover-card-wrapper-"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px;
+}
+
+.ehc-card {
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(54, 115, 246, 0.25);
+    cursor: pointer;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-size: cover;
+    background-position: center;
+    border: 0.2px solid #707070;
+}
+
+.ehc-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--ehc-bg-normal, rgba(0,34,26,0.8));
+    z-index: 1;
+}
+
+.ehc-card:hover::before,
+.ehc-card.is-hovered::before {
+    background: var(--ehc-bg-hover, rgba(0,20,15,0.9));
+}
+
+.ehc-card:hover,
+.ehc-card.is-hovered {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 32px rgba(54, 115, 246, 0.25);
+}
+
+.ehc-logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    z-index: 2;
+}
+
+.ehc-logo svg {
+    fill: white;
+    width: 100%;
+    height: 100%;
+}
+
+.ehc-content {
+    margin-top: 50px;
+    flex-grow: 1;
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+}
+
+.ehc-title {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 10px;
+}
+
+.ehc-descriptions {
+    position: relative;
+    min-height: 80px;
+}
+
+.ehc-description {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+	font-weight: 300;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    transform: translateY(0);
+    will-change: opacity, transform;
+}
+.ehc-short {
+	font-size: 20px;
+    line-height: 24px;
+	font-weight: 300;
+}
+.ehc-description ul {
+  list-style-type: none;
+  margin: 0;
+  padding:0;
+}
+.ehc-description.ehc-long {
+    opacity: 0;
+    transform: translateY(12px);
+}
+
+.ehc-card:hover .ehc-description.ehc-short,
+.ehc-card.is-hovered .ehc-description.ehc-short {
+    opacity: 0;
+    transform: translateY(-12px);
+}
+
+.ehc-card:hover .ehc-description.ehc-long,
+.ehc-card.is-hovered .ehc-description.ehc-long {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.ehc-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: transparent;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    padding: 3px 10px 3px 16px;
+    text-decoration: none !important;
+    font-size: 14px;
+    gap: 6px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 80%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.ehc-button.ehc-small {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border-radius: 50%;
+    justify-content: center;
+}
+
+.ehc-button.ehc-small {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: scale(1);
+    text-decoration: none !important;
+	 color:#fff;
+}
+
+.ehc-button.ehc-large {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1);
+    text-decoration: none !important;
+	 color:#fff;
+}
+
+.ehc-card:hover .ehc-button.ehc-small,
+.ehc-card.is-hovered .ehc-button.ehc-small {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: scale(1);
+    text-decoration: none !important;
+    color:#fff;
+}
+
+.ehc-card:hover .ehc-button.ehc-large,
+.ehc-card.is-hovered .ehc-button.ehc-large {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: scale(1);
+    text-decoration: none !important;
+    color:#fff !important;
+}
+
+.ehc-card:active .ehc-button.ehc-large,
+.ehc-card:visited .ehc-button.ehc-large,
+.ehc-card:link .ehc-button.ehc-large {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: scale(1);
+    text-decoration: none !important;
+    color:#fff !important;
+}
+
+.ehc-button svg {
+    width: 14px;
+    height: 14px;
+    fill: currentColor;
+}
+a.ehc-button.ehc-large {
+	color:#fff !important;
+}
+
+.ehc-card-link {
+    display: block;
+	 width:100% !important;
+    text-decoration: none;
+    color: inherit;
+}
+.ehc-card-link .ehc-card {
+    cursor: pointer;
+}
