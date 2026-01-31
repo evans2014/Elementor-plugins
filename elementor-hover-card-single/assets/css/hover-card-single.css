@@ -1,0 +1,262 @@
+.hover-card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+
+}
+
+.hover-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  /*flex: 1 1 calc(33.333% - 20px);
+  min-width: 250px;*/
+  width: 100%;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+@media (hover: hover) {
+    .hover-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+    }
+
+    .hover-card:hover .hover-card__overlay {
+        opacity: 1;
+    }
+
+    .hover-card:hover .hover-card__title-bar {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+.hover-card img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.4s ease;
+}
+
+.hover-card__title-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 150px 40px 12px 24px !important;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.hover-card__overlay {
+  position: absolute;
+  inset: 0;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  border-radius: 12px;
+  padding: 30px;
+  text-align: left;
+  z-index: 3;
+}
+
+
+.hover-card:hover .hover-card__overlay,
+.hover-card.active .hover-card__overlay {
+  opacity: 1;
+}
+
+.hover-card:hover img,
+.hover-card.active img {
+  transform: scale(1.1);
+}
+
+/* Mobile friendly */
+@media (max-width: 768px) {
+  .hover-card-wrapper {
+    flex-direction: column;
+  }
+  .hover-card {
+    flex: 1 1 100%;
+  }
+}
+
+.hover-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #222;
+  border-radius: 12px;
+  color: #fff;
+}
+
+.hover-card__content {
+  margin-bottom: 15px;
+}
+
+.hover-card__buttons-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.hover-card__buttons-top {
+  display: flex;
+  gap: 10px;
+}
+
+.hover-card__buttons-bottom {
+  display: inline;
+  text-align: right;
+  padding-top: 30px;
+}
+
+.hover-card__button {
+  padding: 8px 12px;
+  background-color:  rgb(58, 133, 96,0.8);
+  color: #fff !important;
+  text-decoration: none;
+  border-radius: 12px;
+  transition: background 0.3s ease;
+  background-image:url('../images/check-mark-white.svg');
+  background-size: 16px;
+  background-repeat: no-repeat;
+  padding-left: 32px;
+  display: block;
+  background-position: 10px 8px;
+}
+
+.hover-card__button:hover {
+  background-color:  rgb(58, 133, 96,0.9);
+  color:#fff;
+}
+.hover-card:hover .hover-card__title-bar{
+  opacity: 0;
+}
+.hover-card__button_white {
+  padding: 8px 15px;
+  background-color:#ffffff;
+  color:#F58341 !important;
+  text-decoration: none;
+  border-radius: 12px;
+  transition: background 0.3s ease;
+}
+
+.hover-card__button_white:hover {
+  background-color:#ffffff;
+   color:#F58341 !important;
+}
+
+.hover-card__overlay h5,
+ .hover-card__title-bar h5 {
+  color: #ffffff !important;
+}
+
+a.hover-card__button {
+	color:#ffffff !important
+}
+
+.hover-card__icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 5;
+  width: 32px;
+  height: 32px;
+}
+
+.hover-card__icon img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s ease;
+}
+
+.hover-card__icon .icon-default { opacity: 1; }
+.hover-card__icon .icon-hover { opacity: 0; }
+
+.hover-card:hover .hover-card__icon .icon-default,
+.hover-card.active .hover-card__icon .icon-default {
+  opacity: 0;
+}
+.hover-card:hover .hover-card__icon .icon-hover,
+.hover-card.active .hover-card__icon .icon-hover {
+  opacity: 1;
+}
+.hover-card img.icon-default {
+  transition: transform 0.5s ease;
+}
+
+.hover-card:hover img.icon-hover {
+  transform: scale(1);
+}
+
+/* Left/right image and text*/
+.block-text h3{
+	color:#fff
+}
+@media screen and (max-width: 1200px) {
+	.block-text h3{
+		font-size:42px;
+		line-height:42px;
+	}
+}
+@media screen and (max-width: 1076px) {
+	.block-text h3{
+		font-size:36px;
+		line-height:36px;
+	}
+}
+@media only screen and (max-width: 768px) {
+  .image-right .block-image {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-right: 0;
+    top: 10px;
+
+  }
+	.image-left .block-image {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-right: 0;
+    top: 10px;
+
+  }
+	.custom-wrapper.image-left {
+  margin-bottom: 30px;
+
+	}
+	.hover-card__overlay {
+  padding: 20px 15px;
+
+	}
+}
+
+.dialog-body .swiper-pagination {
+	display:none;
+}
+@media (max-width:762px) and (min-width:392px) {
+img.load-image {
+		width:100% !important;
+		height: 400px; 
+        object-fit: cover ;
+				object-position: top;
+   }
+	 .hover-card:hover {
+    transform: scale(1);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+  }
+}
